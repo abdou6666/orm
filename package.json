@@ -1,0 +1,23 @@
+{
+  "name": "orm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "concurrently \"npm run watch:src\" \"npm run watch:dist\"",
+    "watch:src": "tsc -w",
+    "watch:dist": "nodemon --watch 'dist/**/*.js' --exec nodemon dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sqlite3": "^5.1.7-rc.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "@types/sqlite3": "^3.1.11",
+    "typescript": "^5.3.3"
+  }
+}
