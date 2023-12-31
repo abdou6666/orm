@@ -1,31 +1,9 @@
 {
+  "extends": "@tsconfig/node18/tsconfig.json",
   "compilerOptions": {
-  "baseUrl": "./",
-  "paths": {
-      "@/*": ["src/*"]
+    "outDir": "dist",
+    "sourceMap": true
   },
-  "target": "ES2022",
-  "esModuleInterop": true,
-  "skipLibCheck": true,
-  "verbatimModuleSyntax": false,
-  "allowJs": false,
-  "checkJs": false,
-  // "resolveJsonModule": true,
-  "moduleDetection": "force",  // Check if this is necessary
-  "strict": true,
-  "noUncheckedIndexedAccess": true,
-  "module": "ES2022",
-  "outDir": "./dist",
-  "rootDir": "./src",
-  "sourceMap": true,
-  "sourceRoot": "./src",
-  "mapRoot": "./dist",
-
-  "lib": ["ES2022"],
-  "declaration": true,
-  "composite": true,  // Check if this is necessary
-  "declarationMap": true,  // Check if this is necessary
-},
-
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
 }

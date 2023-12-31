@@ -6,9 +6,9 @@ export default class Database {
     constructor(private fileName: string, private config?: any) {
     }
 
-    getDatabase() {
+    getDatabase(): sqlite3.Database {
         if (!this.db) {
-            this.createDatabase();
+            this.db = this.createDatabase();
             return this.db;
         } else {
             return this.db;
@@ -24,6 +24,7 @@ export default class Database {
             }
         });
 
+        return this.db;
     }
 }
 

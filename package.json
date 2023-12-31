@@ -5,20 +5,26 @@
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
-    "start": "concurrently \"npm run watch:src\" \"npm run watch:dist\"",
     "watch:src": "tsc -w",
-    "watch:dist": "nodemon --watch 'dist/**/*.js' --exec nodemon dist"
+    "watch:dist": "nodemon --watch 'dist/**/*.js' --exec nodemon dist",
+    "build": "rimraf ./dist && tsc",
+    "dev": "nodemon",
+    "start": "concurrently \"npm run watch:src\" \"npm run watch:dist\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "concurrently": "^8.2.2",
     "sqlite3": "^5.1.7-rc.0"
   },
   "devDependencies": {
+    "@tsconfig/node18": "^18.2.2",
     "@types/node": "^20.10.6",
     "@types/sqlite3": "^3.1.11",
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.2",
+    "rimraf": "^5.0.5",
+    "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   }
 }
