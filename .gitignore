@@ -2,3 +2,4 @@ node_modules
 dist
 example.db
 tsconfig.tsbuildinfo
+test.db

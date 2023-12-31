@@ -1,7 +1,6 @@
-const main = () => {
-    const a: number = 5;
-    const b: number = 5;
-    console.log(a + b);
-};
+import Database from "./config/db";
 
-main();
+const db = new Database("test.db");
+
+const t = db.getDatabase();
+console.log({ t });

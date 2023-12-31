@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^8.2.2",
     "sqlite3": "^5.1.7-rc.0"
   },
   "devDependencies": {

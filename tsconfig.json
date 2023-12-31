@@ -1,29 +1,31 @@
 {
   "compilerOptions": {
-    // base options
-    "target": "ES2022",
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "verbatimModuleSyntax":false,
-    "allowJs": true,
-    // "resolveJsonModule": true,
-    "moduleDetection": "force",
-
-    // strictness
-    "strict": true,
-    "noUncheckedIndexedAccess": true,
-
-    "module": "ESNext",
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "sourceMap": true,
-
-    "lib": ["ES2022"],
-    "declaration": true,
-
-    "composite": true,
-    "declarationMap": true
+  "baseUrl": "./",
+  "paths": {
+      "@/*": ["src/*"]
   },
+  "target": "ES2022",
+  "esModuleInterop": true,
+  "skipLibCheck": true,
+  "verbatimModuleSyntax": false,
+  "allowJs": false,
+  "checkJs": false,
+  // "resolveJsonModule": true,
+  "moduleDetection": "force",  // Check if this is necessary
+  "strict": true,
+  "noUncheckedIndexedAccess": true,
+  "module": "ES2022",
+  "outDir": "./dist",
+  "rootDir": "./src",
+  "sourceMap": true,
+  "sourceRoot": "./src",
+  "mapRoot": "./dist",
+
+  "lib": ["ES2022"],
+  "declaration": true,
+  "composite": true,  // Check if this is necessary
+  "declarationMap": true,  // Check if this is necessary
+},
+
   "include": ["src/**/*.ts"],
-  "exclude": ["node_modules"]
 }
